@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#game-container {
+  display: inline-block;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 1px;
+  width: 400px;
+  height: 400px;
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.square:nth-child(odd) {
+  background-color: #999;
+}
+
+.square:nth-child(even) {
+  background-color: #eee;
+}
+
+.piece {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.piece[data-team="teamA"] {
+  background-color: #f00;
+}
+
+.piece[data-team="teamB"] {
+  background-color: #00f;
+}
+
+.swap {
+  background-color: #ffa07a;
+}
+
+.teleport {
+  background-color: #90ee90;
+}
+
+.freeze {
+  background-color: #add8e6;
+}
+
+.reverse {
+  background-color: #ffcccb;
+}
